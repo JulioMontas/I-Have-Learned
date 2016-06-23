@@ -30,12 +30,12 @@ Run Sails.js
 sails lift
 ```
 
-Inside the URL add data to the API of user [Postman Chrome Extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+In the browser add this URL to view or add the data, can also use [Postman Chrome Extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 ```javascript
 http://localhost:1337/user/create?name=Jose
 ```
 
-To disable the URL CRUD when you finish production, go over to the ‘blueprints-js file’.
+To disable the URL CRUD when you finish production, go over to the blueprints-js.
 ```
 change shortcuts:false
 ```
