@@ -3,9 +3,11 @@
 
 ###Spring 2016
 - Javascript Cheatsheet
+- Bash Cheatsheet
 - Rails Cheatsheet
 - Rails Api
-- Bash Cheatsheet
+- AJAX Calls
+
 
 ###Summer 2016
 - Sails.js Api with Passport.js
