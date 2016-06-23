@@ -1,5 +1,6 @@
-#Getting Started with Sails.js v0.12
+#Getting Started with Sails.js v0.12.3
 
+## Getting in less than 5min.
 Install the latest stable release
 ```
 npm -g install sails
@@ -43,4 +44,82 @@ allRoutes: true
 `config/blueprint.js` enabled by default, but should be disabled in production.
 ```javascript
 shortcuts:false
+```
+
+
+
+## Using PostgreSQL
+
+- Open PostgreSQL: `psql`
+
+### PostgreSQL level
+- Show all databases: `\l`
+- Create database: `CREATE DATABASE sails_sails_db;`
+- Connect to specific database: `\connect sails_sails_db`
+- Drop database: `DROP DATABASE sails_sails_db;`
+
+### Database level
+- List all tables: `\d sails_sails_db`
+
+### Installing sails-postgresql
+Installing PostgreSQL as a dependencies
+```
+npm install --save sails-postgresql
+```
+
+`config/connections.js` Add PostgreSQL
+```
+julioPostgresqlServer: {
+  adapter: 'sails-postgresql',
+  host: 'localhost',
+  user: 'null',
+  password: '',
+  database: 'sails_sails_db'
+}
+```
+
+`config/models.js` replace `connection: 'localDiskDb',` to
+```
+connection: 'julioPostgresqlServer'
+```
+
+`api/models/User.js` not the best model but for testing is fine
+```javascript
+/**
+ * User.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
+ */
+
+module.exports = {
+  attributes: {
+    bio: {type: 'string'},
+    first_name: {type: 'string'},
+    last_name: {type: 'string'},
+    age: {type: 'date'},
+    gender: {type: 'integer'},
+    email: {type: 'array'},
+    location: {type: 'string'},
+    birthday: {type: 'date'},
+    is_admin: {type: 'boolean'}
+  }
+};
+```
+
+Specifies the type of data that will be stored in this attribute [Attribute Options](http://sailsjs.org/documentation/concepts/models-and-orm/attributes)
+```
+string
+text
+integer
+float
+date
+datetime
+boolean
+binary
+array
+json
+mediumtext
+longtext
+objectid
 ```
