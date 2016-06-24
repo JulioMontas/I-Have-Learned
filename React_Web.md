@@ -275,7 +275,19 @@ export default helpers;
 ```
 
 ## Step III: Run React
-Make new directory
+
+In the 'root' directory, start React
 ```
 npm start
+```
+
+Check in the browser
+```
+http://localhost:8080/
+```
+
+## Step IV:
+Text here
+```
+
 ```
