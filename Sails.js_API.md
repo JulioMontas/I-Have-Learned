@@ -47,7 +47,6 @@ shortcuts:false
 ```
 
 
-
 ## Using PostgreSQL
 
 - Open PostgreSQL: `psql`
@@ -94,15 +93,33 @@ connection: 'julioPostgresqlServer'
 
 module.exports = {
   attributes: {
-    bio: {type: 'string'},
-    first_name: {type: 'string'},
-    last_name: {type: 'string'},
-    age: {type: 'date'},
-    gender: {type: 'integer'},
-    email: {type: 'array'},
-    location: {type: 'string'},
-    birthday: {type: 'date'},
-    is_admin: {type: 'boolean'}
+    bio:{
+      type: 'string'
+    },
+    first_name:{
+      type: 'string'
+    },
+    last_name:{
+      type: 'string'
+    },
+    age:{
+      type: 'date'
+    },
+    gender:{
+      type: 'integer'
+    },
+    email:{
+      type: 'array'
+    },
+    location:{
+      type: 'string'
+    },
+    birthday:{
+      type: 'date'
+    },
+    is_admin:{
+      type: 'boolean'
+    }
   }
 };
 ```
@@ -122,4 +139,28 @@ json
 mediumtext
 longtext
 objectid
+```
+
+## To render React.JS [Video with only 109 views](https://www.youtube.com/watch?v=SaGNKRKvB-c)
+
+
+`config/views.js` to add this
+```javascript
+engine:{
+  ext: 'jsx',
+  fn: require('express-react-views').createEngine()
+},
+```
+
+`views/homepage.ejs` rename to the file extension .jsx
+```javascript
+import React from 'react';
+
+class HelloWorld extends React.Component {
+  render() {
+    return <p>Hello, world!</p>;
+  }
+}
+
+export default HelloWorld;
 ```

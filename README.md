@@ -10,4 +10,4 @@
 
 
 ###Summer 2016
-- Sails.js Api with Passport.js
+- Sails.js API with PostgreSQL
