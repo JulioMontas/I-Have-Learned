@@ -16,6 +16,11 @@ Create a new app
 sails new newProject
 ```
 
+Create a new app with out the Front-end
+```javascript
+sails new newProject --no-frontend
+```
+
 Open the app folder
 ```javascript
 cd newProject
