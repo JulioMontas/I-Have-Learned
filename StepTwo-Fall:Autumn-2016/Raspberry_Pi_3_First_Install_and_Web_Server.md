@@ -15,22 +15,22 @@ Raspberry Pi | Web Server | Database | PHP | Node
 $ diskutil list
 ```
 
-- Unmount the SD Card
+2. Unmount the SD Card
 ```
 $ diskutil unmountDisk /dev/disk2
 ```
 
-- Install the Linux to the SD Card
+3. Install the Linux to the SD Card
 ```
 $ sudo dd bs=1m if=2016-09-23-raspbian-jessie-lite.img of=/dev/disk2
 ```
 
-- Eject the SD Card
+4. Eject the SD Card
 ```
 $ sudo diskutil eject /dev/disk2
 ```
 
-- Clear your SSH Key if you need to, use your IP address
+5. Clear your SSH Key if you need to, use your IP address
 ```
 $ ssh-keygen -R 192.168.0.0
 ```
@@ -53,20 +53,19 @@ $ sudo apt-get dist-upgrade
 $ sudo apt-get upgrade
 ```
 
-- Raspbian Configuration
-```
-$ sudo raspi-config
-```
-
-#### Global Install
-- Git (version control system)
+- Install Git (version control system)
 ```
 $ sudo apt-get install git-all
 ```
 
-- Tree (directory viewer)
+- Install Tree (directory viewer)
 ```
 $ sudo apt-get install tree
+```
+
+- Raspbian Configuration
+```
+$ sudo raspi-config
 ```
 
 #### Installing PHP 7
