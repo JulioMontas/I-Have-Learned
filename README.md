@@ -15,6 +15,6 @@
 - [Node.js, Express.js, MongoDB, Handlebars.](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Node_Expess_Mongodb_Handlebars.md)
 
 ###Fall/Autumn 2016 October
-- [Web Server on a Raspberry Pi 3](#)
+- [Raspberry Pi 3 First Install and Web Server](https://github.com/JulioMontas/I-have-learned/blob/master/StepTwo-Fall:Autumn-2016/Raspberry_Pi_3_First_Install_and_Web_Server.md)
 
 ###Winter 2016
