@@ -541,11 +541,11 @@ PUT      /api/v1/users/:id   Update user
 DELETE   /api/v1/users/:id   Delete user
 ```
 
-##### Languages
+##### Times
 ```
-GET      /times       Get all languages
-GET      /times/:id   Get language
-POST     /times       Create language
-PUT      /times/:id   Update language
-DELETE   /times/:id   Delete language
+GET      /times       Get all times
+GET      /times/:id   Get times
+POST     /times       Create times
+PUT      /times/:id   Update times
+DELETE   /times/:id   Delete times
 ```
