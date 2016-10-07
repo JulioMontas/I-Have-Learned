@@ -2,17 +2,17 @@
 
 
 ###Spring 2016
-- [Javascript Cheatsheet](#)
-- [Bash Cheatsheet](#)
-- [Rails Cheatsheet](#)
+- [Javascript Cheatsheet](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Javascript_Cheatsheet.md)
+- [Bash Cheatsheet](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Bash_Cheatsheet.md)
+- [Rails Cheatsheet](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Rails-Cheatsheet.md)
 - [Rails Api](#)
-- [AJAX Calls](#)
+- [AJAX Calls](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/AJAX_Calls.md)
 
 ###Summer 2016
-- [Sails.js API with PostgreSQL](#)
-- [React Web](#)
-- [React Native](#)
-- [Node.js, Express.js, MongoDB, Handlebars.](#)
+- [Sails.js API with PostgreSQL](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Sails.js_API.md)
+- [React Web](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/React_Web.md)
+- [React Native](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/React_Native.md)
+- [Node.js, Express.js, MongoDB, Handlebars.](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Node_Expess_Mongodb_Handlebars.md)
 
 ###Fall/Autumn 2016 October
 - [Web Server on a Raspberry Pi 3](#)
