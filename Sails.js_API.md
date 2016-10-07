@@ -46,6 +46,12 @@ http://localhost:1337/user/create?name=Jose
 allRoutes: true
 ```
 
+
+`config/blueprints.js` change the routes to /api/v2
+```javascript
+prefix: '/api/v2',
+```
+
 `config/blueprint.js` enabled by default, but should be disabled in production.
 ```javascript
 shortcuts:false

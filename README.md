@@ -12,3 +12,5 @@
 ###Summer 2016
 - Sails.js API with PostgreSQL
 - React Web
+- React Native
+- Node.js, Express.js, MongoDB, Handlebars.
