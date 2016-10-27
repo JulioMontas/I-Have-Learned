@@ -6,26 +6,24 @@ Raspberry Pi | Web Server | Database | PHP | Node | Monitor
 
 ## Step 1.0: Getting Started
 
-Format The SD Card with `SDFormatter`
-- [SDFormatter](https://www.sdcard.org/downloads/formatter_4/index.html)
+Format The SD Card with [SDFormatter](https://www.sdcard.org/downloads/formatter_4/index.html)
 
-Getting the SD Card to install `Raspbian Jessie Lite` in terminal
-1. View your drive directory location
+View your drive directory location
 ```
 $ diskutil list
 ```
 
-2. Unmount the SD Card
+Unmount the SD Card
 ```
 $ diskutil unmountDisk /dev/disk2
 ```
 
-3. Install the Linux to the SD Card
+Install the Linux to the SD Card
 ```
 $ sudo dd bs=1m if=2016-09-23-raspbian-jessie-lite.img of=/dev/disk2
 ```
 
-4. Eject the SD Card
+Eject the SD Card
 ```
 $ sudo diskutil eject /dev/disk2
 ```
@@ -42,7 +40,8 @@ $ sudo raspi-config
 ```
 - SSH server enabled
 - Boot Option
-- Hostname
+- Hostname change
+
 
 ## Step 1.2: In the Terminal (Mac)
 SSH to the pi
@@ -63,7 +62,7 @@ $ sudo apt-get dist-upgrade
 $ sudo apt-get upgrade
 ```
 
-- Install Tree (directory viewer)
+Install Tree (directory viewer)
 ```
 $ sudo apt-get install tree
 ```
@@ -268,8 +267,6 @@ $ sudo /etc/init.d/nginx restart
 $ sudo /etc/init.d/php7.0-fpm restart
 ```
 
-
-
 Add a new site
 ```
 $ cd /etc/nginx/sites-available
@@ -295,8 +292,8 @@ $ sudo nginx -t
 ```
 
 
-
-
+NOTE: Clean this notes
+```
 sudo nano /etc/nginx/sites-available/
 sudo chown -R www-data:www-data var/www/practicaldoctor
 cd /etc/nginx/sites-available
@@ -308,13 +305,7 @@ root /var/www/practicaldoctor
 
 sudo ln -s /etc/nginx/sites-available/practicaldoctor /etc/nginx/sites-enabled/
 sudo ln -s /etc/nginx/sites-available/cardboard /etc/nginx/sites-enabled/
-
-
-
-
-
-
-
+```
 
 Installing MySQL and set a password for root user
 ```
@@ -327,48 +318,6 @@ Securing MySQL
 $ sudo mysql_secure_installation
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Step 1.4: Installing of Nginx
-```
-sudo apt-get install nginx
-```
-
-View Nginx in your browser
-```
-http://192.168.0.25/
-```
 
 ## Step 1.5: Install RPi-Monitor
 Install Git
@@ -435,75 +384,14 @@ $ sudo netstat -nap
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-CD to the `www` directory
-```
-cd /var/www/html
-```
-
-Make a php file
-```
-sudo touch info.php
-```
-
-Edit the `info.php`
-```
-sudo nano info.php
-```
-
-Enter inside `info.php`
-```php
-sudo nano info.php
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Step 1.1: Setup your Router
+## Step 1.6: Setup your Router
 
 Google `{Router Name} router LAN IP` to get the default IP
 Google `{Router Name} router password` to get the default Username and Password
 
 
-
 Install Later
 - [Piwik (Analytics)](https://piwik.org/docs/installation/#the-5-minut-piwik-installation)
-
 
 Reference Links
 - [Raspberry Pi Dev Setup with Nginx + PHP7](https://getgrav.org/blog/raspberrypi-nginx-php7-dev)
