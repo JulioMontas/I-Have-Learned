@@ -1,7 +1,7 @@
-# Raspberry Pi 3 Wireless Security Basic SETUP
+# Raspberry Pi 3: Wireless Security Basic SETUP
 
 
-## Step 1.0 | Getting Started | Tmux
+## Step 1.0 Tmux
 
 Install it
 ```
@@ -29,8 +29,8 @@ tmux a -t workingStationName
 ```
 
 
-## Step 1.1 | Getting Started | aircrack-ng         
-Install it, easy
+## Step 1.1 aircrack-ng         
+Install it
 ```
 $ sudo apt-get install aircrack-ng
 ```
@@ -93,7 +93,7 @@ $ sudo aircrack-ng -w rockyou.txt -b 00:90:4C:C1:AC:21 ESSIDname-*.cap
 
 
 
-## Step 1.2 | Getting Started | Pixie Dust WPS attack with Raver and wash
+## Step 1.2 Pixie Dust WPS attack with Raver and wash
 
 Getting the System Ready
 ```
@@ -149,7 +149,7 @@ $ sudo reaver -i mon0 -b 00:90:4C:C1:AC:21 -c 11 -vvv -K 1 -f
 ```
 
 
-## Step 1.3 | Getting Started | Wash + Reaver
+## Step 1.3 Wash + Reaver
 
 See the vulnerability to attack
 ```

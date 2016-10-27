@@ -15,6 +15,12 @@
 - [Node.js, Express.js, MongoDB, Handlebars.](https://github.com/JulioMontas/I-have-learned/blob/master/StepOne-SpringAndSummer-2016/Node_Expess_Mongodb_Handlebars.md)
 
 ###Fall/Autumn 2016 October
-- [Raspberry Pi 3 First Install and Web Server](https://github.com/JulioMontas/I-have-learned/blob/master/StepTwo-Fall:Autumn-2016/Raspberry_Pi_3_First_Install_and_Web_Server.md)
+- [Raspberry Pi 3: First Install and Web Server](https://github.com/JulioMontas/I-have-learned/blob/master/StepTwo-Fall:Autumn-2016/Raspberry_Pi_3_First_Install_and_Web_Server.md)
+
+- [Raspberry Pi 3: Wireless Security Basic SETUP](https://github.com/JulioMontas/I-have-learned/blob/master/StepTwo-Fall:Autumn-2016/Raspberry_Pi_3_Wireless_Security_Basic_SETUP.md)
+
+- [Raspberry Pi 3 First Install of Kali Linux](https://github.com/JulioMontas/I-have-learned/blob/master/StepTwo-Fall:Autumn-2016/Raspberry_Pi_3_First_Install_Linux_Kali.md)
+
+- [Wordpress Themes Using Underscores](https://github.com/JulioMontas/I-have-learned/blob/master/StepTwo-Fall:Autumn-2016/Wordpress_with_Underscore.md)
 
 ###Winter 2016
