@@ -212,6 +212,7 @@ Open `post-1.md` to add and see the result in the terminal bundle buil
 slug: "/blog/my-first-post"
 date: "2019-05-04"
 title: "My first blog post"
+description: "Hello World"
 ---
 ```
 
@@ -396,4 +397,68 @@ const PostLink = ({ post }) => (
 )
 
 export default PostLink
+```
+
+
+
+Making a new distanation to `/case-study/my-second-post` by adding a new markdown file
+```
+touch ./src/markdown-pages/post-2.md
+```
+
+Open `post-2.md` to add and see the result in the terminal bundle build:
+```
+---
+slug: "/case-study/my-second-post"
+date: "2020-09-18"
+title: "My Second blog post"
+description: "Hello World MDF"
+---
+Textttttt
+```
+
+
+Make the url for `/case-study/`:
+```
+touch ./src/pages/case-study.js
+```
+
+Inisde `case-study.js` add:
+```
+import React from "react"
+import { graphql } from "gatsby"
+import PostLink from "../components/post-link"
+
+const CaseStudyPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+
+  return <div>{Posts}</div>
+}
+
+export default CaseStudyPage
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`
 ```
