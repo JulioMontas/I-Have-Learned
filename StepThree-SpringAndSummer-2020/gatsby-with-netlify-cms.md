@@ -9,11 +9,11 @@ Gatsby JS | GraphQL | Netlify
 
 Create a new app: 
 ```
-$ gatsby new hello-world
+$ gatsby new jm0001
 ```
 Change into the directory and start the development mode:
 ```
-$ cd hello-world && gatsby develop
+$ cd jm0001 && gatsby develop
 ```
 
 Visit the site locally and GraphiQL:
@@ -49,6 +49,85 @@ The query result:
   "extensions": {}
 }
 ```
+
+## Step 1.1: Integrate MDX
+
+Install the `gatsby-plugin-mdx` plugin
+```
+npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+```
+
+Then add `gatsby-plugin-mdx` to your `gatsby-config.js` in the plugins section.
+```
+module.exports = {
+  siteMetadata: {
+    title: `My Ambitious Project`
+  },
+  plugins: [`gatsby-plugin-mdx`]
+}
+```
+
+## Step 1.2: Adding Markdown Pages
+Install npm packages:
+
+```
+$ npm install --save gatsby-source-filesystem gatsby-transformer-remark
+```
+
+
+```
+$ yarn add gatsby-source-filesystem gatsby-transformer-remark
+```
+
+Open `gatsby-config.js` 
+```
+plugins: [
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `${__dirname}/src/markdown-pages`,
+      name: `markdown-pages`,
+    },
+  },
+  `gatsby-transformer-remark`,
+]
+```
+
+Add a Markdown file
+```
+mkdir -p ./src/mdx-pages
+touch ./src/mdx-pages/post-1.mdx
+```
+
+Open `post-1.md` to add and see the result in the terminal bundle buil
+```
+---
+slug: "/blog/my-first-post"
+date: "2020-09-24"
+title: "My first blog post"
+description: "Hello World"
+---
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Step 1.1: Integrate Netlify CMS
 Install npm packages:
 ```
@@ -163,57 +242,6 @@ GitLab
     enableIdentityWidget: false,
   }
 }
-```
-## Step 1.3: Adding Markdown Pages
-Install npm packages:
-```
-$ npm install --save gatsby-source-filesystem
-```
-
-Open `gatsby-config.js` to add:
-```
-plugins: [
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `markdown-pages`,
-      path: `${__dirname}/src/markdown-pages`,
-    },
-  },
-]
-```
-Install npm packages:
-```
-$ npm install --save gatsby-transformer-remark
-```
-Open `gatsby-config.js` to add:
-```
-plugins: [
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      path: `${__dirname}/src/markdown-pages`,
-      name: `markdown-pages`,
-    },
-  },
-  `gatsby-transformer-remark`,
-]
-```
-
-Add a Markdown file
-```
-mkdir -p ./src/markdown-pages
-touch ./src/markdown-pages/post-1.md
-```
-
-Open `post-1.md` to add and see the result in the terminal bundle buil
-```
----
-slug: "/blog/my-first-post"
-date: "2019-05-04"
-title: "My first blog post"
-description: "Hello World"
----
 ```
 
 ## Step 1.4: Create a page template for the Markdown files
