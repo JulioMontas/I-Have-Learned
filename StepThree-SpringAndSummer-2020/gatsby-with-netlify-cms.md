@@ -55,14 +55,15 @@ The query result:
 Install the `gatsby-plugin-mdx` plugin
 ```
 npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
+
+For any problems run
+```
+npm install
 ```
 
 Then add `gatsby-plugin-mdx` to your `gatsby-config.js` in the plugins section.
 ```
 module.exports = {
-  siteMetadata: {
-    title: `My Ambitious Project`
-  },
   plugins: [`gatsby-plugin-mdx`]
 }
 ```
@@ -72,11 +73,6 @@ Install npm packages:
 
 ```
 $ npm install --save gatsby-source-filesystem gatsby-transformer-remark
-```
-
-
-```
-$ yarn add gatsby-source-filesystem gatsby-transformer-remark
 ```
 
 Open `gatsby-config.js` 
@@ -95,17 +91,16 @@ plugins: [
 
 Add a Markdown file
 ```
-mkdir -p ./src/mdx-pages
-touch ./src/mdx-pages/post-1.mdx
+mkdir -p ./src/mdx-pages && touch ./src/mdx-pages/post-1.mdx
 ```
 
-Open `post-1.md` to add and see the result in the terminal bundle buil
+Open `post-1.mdx` to add and see the result in the terminal bundle build
 ```
 ---
-slug: "/blog/my-first-post"
-date: "2020-09-24"
 title: "My first blog post"
 description: "Hello World"
+slug: "/blog/my-first-post"
+date: "2021-01-24"
 ---
 ```
 
@@ -494,6 +489,12 @@ export const pageQuery = graphql`
 Add `gatsby-plugin-mdx` and MDX as dependencies and also install `gatsby-plugin-feed-mdx` for our RSS feeds
 ```
 npm install --save gatsby-plugin-mdx gatsby-plugin-feed-mdx @mdx-js/mdx @mdx-js/react
+
+npm install gatsby-remark-images gatsby-plugin-sharp
+npm install gatsby-remark-responsive-iframe
+npm install gatsby-transformer-remark gatsby-remark-prismjs prismjs
+npm install gatsby-remark-copy-linked-files
+npm install gatsby-remark-smartypants
 ```
 
 
