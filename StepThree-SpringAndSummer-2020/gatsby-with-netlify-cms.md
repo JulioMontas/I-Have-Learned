@@ -9,11 +9,13 @@ Gatsby JS | GraphQL | Netlify
 
 Create a new app: 
 ```
-$ gatsby new jm0001
+gatsby new jm0001 
+gatsby new jm0001 https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic
+gatsby new jm0001 https://github.com/Vagr9K/gatsby-advanced-starter
 ```
 Change into the directory and start the development mode:
 ```
-$ cd jm0001 && gatsby develop
+d jm0001 && gatsby develop
 ```
 
 Visit the site locally and GraphiQL:
@@ -30,6 +32,20 @@ query MyQuery {
     distinct(field: path)
   }
 }
+
+query MyQuery {
+  allMdx(filter: {fileAbsolutePath: {regex: "/blog/"}}) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}
+
+
 ```
 The query result:
 ```
@@ -50,29 +66,131 @@ The query result:
 }
 ```
 
-## Step 1.1: Integrate MDX
 
-Install the `gatsby-plugin-mdx` plugin
-```
-npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
 
-For any problems run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Step 1.5: Adding MDX Pages
+Add `gatsby-plugin-mdx` and MDX as dependencies and also install `gatsby-plugin-feed-mdx` for our RSS feeds
 ```
-npm install
+npm install --save gatsby-plugin-mdx gatsby-plugin-feed-mdx @mdx-js/mdx @mdx-js/react
+
 ```
 
-Then add `gatsby-plugin-mdx` to your `gatsby-config.js` in the plugins section.
+
+Update your `gatsby-config.js` with `gatsby-plugin-mdx`
 ```
 module.exports = {
-  plugins: [`gatsby-plugin-mdx`]
+  plugins: [
+    // Add support for *.mdx files in gatsby
+    "gatsby-plugin-mdx",
+
+    // Add a collection called "posts" that looks
+    // for files in content/posts/
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+  ],
 }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+{
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+```
+Restart `gatsby develop` and add an `.mdx` page to `src/pages`
+
+Remove `gatsby-transformer-remark` and `gatsby-plugin-feed`, you can uninstall them.
+```
+npm uninstall --save gatsby-transformer-remark gatsby-plugin-feed
+```
+
+In `gatsby-node.js`, replace `allMarkdownRemark` with `allMdx` and `MarkdownRemark` with `Mdx`.
+
+
+In src/pages/index.js, replace allMarkdownRemark with allMdx in the render() method.
+
+Also replace allMarkdownRemark with allMdx in the GraphQL query.
+
+In src/templates/blog-post.js, replace markdownRemark with mdx in the render() method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Step 1.2: Adding Markdown Pages
 Install npm packages:
 
 ```
-$ npm install --save gatsby-source-filesystem gatsby-transformer-remark
+npm install --save gatsby-source-filesystem gatsby-transformer-remark
 ```
 
 Open `gatsby-config.js` 
