@@ -32,7 +32,7 @@ yarn dev
 └── yarn.lock
 ```
 
-`/pages/_app.js`
+`./pages/_app.js`
  ```
 import '../styles/globals.css'
 
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp
  ```
-`/pages/index.js`
+`./pages/index.js`
 ```
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
@@ -55,7 +55,7 @@ export default function Home() {
   )
 }
 ```
-`/styles/global.js`
+`./styles/global.js`
 ```
 html,
 body {
@@ -74,7 +74,7 @@ a {
   box-sizing: border-box;
 }
 ```
-`/styles/Home.module.css`
+`./styles/Home.module.css`
 ```
 .container {
   min-height: 100vh;
@@ -89,3 +89,48 @@ a {
 
 }
 ```
+`./package.json`
+```
+{
+  "name": "name",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
+
+```
+# Step 2.0: Getting Started with Strapi.js
+
+HTTP client
+```
+yarn add axios
+```
+Update `./pages/index.js`
+```
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+import axios from 'axios';
+
+export default function Languages() {
+  return (
+    <div className={styles.container}>
+      <h1>Hello</h1>
+    </div>
+  )
+}
+
+axios.get('http://localhost:1337/restaurant').then(response => {
+  console.log(response);
+});
+
+```    
+
