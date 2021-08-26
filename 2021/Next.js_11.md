@@ -133,4 +133,9 @@ axios.get('http://localhost:1337/restaurant').then(response => {
 });
 
 ```    
+# Step 3.0: Connecting Next.JS to GraphQL
+Setting Up Apollo Client
+```
+yarn add @apollo/client graphql
+```
 
