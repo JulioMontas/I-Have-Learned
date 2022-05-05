@@ -5,7 +5,7 @@
 - [Text: Setting Up Yarn Workspaces For Theme Development](https://www.gatsbyjs.com/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/)
 - [Text: Building A Theme](https://www.gatsbyjs.com/tutorial/building-a-theme/)
 
-## Start the Project
+## 01 Start the Project
 Create a new directory for the project
 ```bash
 mkdir gatsby-theme-saas && cd gatsby-theme-saas
@@ -103,5 +103,38 @@ module.exports = {
 ```
 
 
+## 02 Connected the data, Install CMS
 
+```bash
+yarn workspace gatsby-theme-saas add gatsby-source-datocms
+```
+
+In your `gatsby-theme-saa/gatsby-config.js` update it to
+```bash
+const path = require("path")
+module.exports = {
+  plugins: [
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: path.join(__dirname, "src/pages"),
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: apiToken: process.env.DATO_API_TOKEN,
+        preview: false,
+        disableLiveReload: false,
+      },
+    },
+  ],
+}
+```
+
+Tutorial files
+- [DatoCMS](https://www.datocms.com/docs/gatsby/getting_started)
+
+
+## 03 Make the pages.
 
