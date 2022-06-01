@@ -64,3 +64,67 @@ $(document).ready(function(){$("div.variant-select-wrapper:contains('Color')").a
 </script>
 <!-- Ends Plugin -->
 ```
+
+The Styling
+```css
+.variant-option{
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: flex-start;
+  justify-content: flex-start;
+  margin: 0 -5px;
+  padding: 0;
+  list-style: none;
+}
+ul.color-selector{
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-left: -40px;
+}
+li.color-selector-item {
+  list-style: none;
+}
+.color-selector-button{
+  box-sizing: border-box;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  margin: 5px;
+  padding: 0;
+  background: none;
+  background-color: transparent;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: none;
+  color: currentColor;
+  font-weight: 0;
+  font: 0/0 a;
+  line-height: 1;
+  white-space: nowrap;
+  outline: none;
+  transition: background-color 0.25s, border 0.25s, box-shadow 0.25s, 
+  color 0.25s;
+}
+
+.color-selector-button:hover,
+.color-selector-button:focus,
+.color-selector-button.is-active {
+  border: 1px solid #000;
+  box-shadow: none;
+  background-color: transparent;
+  color: currentColor;
+}
+```
