@@ -12,3 +12,6 @@ https://moralis.io/ Serverless database
 https://github.com/amark/gun An open source cybersecurity protocol for syncing decentralized graph data. 
 
 https://web3js.readthedocs.io/en/v1.7.4/ web3.js is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+
+#### To Think about
+- MetaMask used contact list to add friends and addresses you trush
